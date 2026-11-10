@@ -1,5 +1,7 @@
 provider "aws" {
     region = "us-west-2"
+    access_key = ""
+    secret_key = ""
 }
 
 resource "aws_vpc" "myvpc"{
@@ -8,4 +10,4 @@ resource "aws_vpc" "myvpc"{
     tags = {
         Name = "myvpc" 
     }
-}ls
+}
