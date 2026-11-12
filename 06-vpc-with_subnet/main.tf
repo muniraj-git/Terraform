@@ -20,3 +20,13 @@ resource "aws_subnet" "muni_subnet" {
         Name = "muni_sub"
     }
 }
+
+import {
+    to = aws_vpc.muni_vpc
+    id = "vpc-0932213485fe2461b"
+}
+
+import {
+    to = aws_subnet.muni_subnet
+    id = "subnet-0258a854d496078b9"
+}
