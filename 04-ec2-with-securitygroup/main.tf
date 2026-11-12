@@ -39,6 +39,10 @@ resource "aws_security_group" "webtraffic" {
 resource "aws_instance" "new_instance" {
     ami = "ami-0b7ae50ea52e6be93"
     instance_type = "t3.micro"
-    vpc_security_groups_ids = [aws_security_group.webtraffic.id]
+    vpc_security_group_ids = [aws_security_group.webtraffic.id]
+
+    tags = {
+        Name = "myinstance"
+    }
 
 }
