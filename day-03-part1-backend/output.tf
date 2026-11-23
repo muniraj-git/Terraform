@@ -1,3 +1,3 @@
-output "bucket_id"{
-    value = aws_s3_bucket.mybucket.id
+output "instance_id"{
+    value = aws_instance.new_instance.id
 }

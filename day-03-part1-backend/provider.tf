@@ -12,7 +12,11 @@ terraform{
         version = "~> 3.0"
          }
     }
-
+    backend "s3" {
+        bucket = "muni-project-p4rx2w"
+        key = "prod/terraform.tfstate"
+        region = "us-west-2"
+    }
 }
 
 provider "aws" {

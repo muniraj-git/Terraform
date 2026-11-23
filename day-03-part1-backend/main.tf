@@ -1,4 +1,4 @@
-    resource "random_string" "bucket_prefix" {
+    resource "random_string" "instance_prefix" {
         length = 6
         upper = false
         special = false
@@ -6,6 +6,10 @@
         lower = true
     }
 
-    resource "aws_s3_bucket" "mybucket" {
-        bucket = "${var.bucket_name}-${random_string.bucket_prefix.result}"
+    resource "aws_instance" "new_instance" {
+        ami = "ami-0b7ae50ea52e6be93"
+        instance_type = "t3.micro"
+        tags = {
+            Name = "${var.instance_name}-${random_string.instance_prefix.result}"
+        }
     }

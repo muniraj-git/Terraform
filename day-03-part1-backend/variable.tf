@@ -1,5 +1,5 @@
-variable "bucket_name" {
+variable "instance_name" {
     type = string
-    description = "purpose of this bucket"
-    default = "muni-project"
+    description = "purpose of this instance"
+    default = "muni-instance"
 }
