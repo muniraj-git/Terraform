@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect - Social Network</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f0f2f5;
+            color: #1c1e21;
+        }
+
+        /* Top Navigation */
+        header {
+            background: #1877f2;
+            color: white;
+            padding: 12px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+        }
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        .search {
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            width: 250px;
+        }
+
+        .profile {
+            font-weight: bold;
+        }
+
+        /* Main Layout */
+        .container {
+            display: grid;
+            grid-template-columns: 230px 1fr 250px;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        .sidebar, .rightbar, .post, .composer {
+            background: white;
+            padding: 18px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .sidebar p, .rightbar p {
+            padding: 12px 0;
+            font-weight: bold;
+        }
+
+        /* Stories */
+        .stories {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            margin-bottom: 15px;
+        }
+
+        .story {
+            background: #dbeafe;
+            min-width: 100px;
+            height: 130px;
+            border-radius: 10px;
+            display: flex;
+            align-items: end;
+            padding: 10px;
+            font-weight: bold;
+            color: #1877f2;
+        }
+
+        /* Post Composer */
+        .composer input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            margin-top: 12px;
+        }
+
+        /* Posts */
+        .post h3 {
+            margin-bottom: 8px;
+        }
+
+        .post p {
+            margin: 12px 0;
+            line-height: 1.5;
+        }
+
+        .post-image {
+            background: #dbeafe;
+            height: 180px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: #1877f2;
+        }
+
+        .actions {
+            border-top: 1px solid #eee;
+            padding-top: 12px;
+            display: flex;
+            justify-content: space-around;
+            color: #606770;
+            font-weight: bold;
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar, .rightbar {
+                display: none;
+            }
+
+            .search {
+                width: 130px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Connect</h1>
+        <input class="search" type="text" placeholder="Search Connect">
+        <div class="profile">Muniraj</div>
+    </header>
+
+    <div class="container">
+
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <p>👤 My Profile</p>
+            <p>👥 Friends</p>
+            <p>📰 News Feed</p>
+            <p>💬 Messages</p>
+            <p>👥 Groups</p>
+            <p>📅 Events</p>
+            <p>⚙️ Settings</p>
+        </aside>
+
+        <!-- Main Feed -->
+        <main>
+
+            <div class="stories">
+                <div class="story">Your Story</div>
+                <div class="story">Pooja</div>
+                <div class="story">Rahul</div>
+                <div class="story">Pratap</div>
+            </div>
+
+            <div class="composer">
+                <h3>What's on your mind?</h3>
+                <input type="text" placeholder="Share something with friends...">
+            </div>
+
+            <div class="post">
+                <h3>Rahul Kumar</h3>
+                <small>2 hours ago</small>
+                <p>Enjoying a beautiful day! Keep smiling and stay positive. 😊</p>
+                <div class="post-image">Beautiful Day ☀️</div>
+                <br>
+                <div class="actions">
+                    <span>👍 Like</span>
+                    <span>💬 Comment</span>
+                    <span>↗ Share</span>
+                </div>
+            </div>
+
+            <div class="post">
+                <h3>Pooja V.</h3>
+                <small>5 hours ago</small>
+                <p>Life is better when you surround yourself with good people! ❤️</p>
+                <div class="actions">
+                    <span>👍 Like</span>
+                    <span>💬 Comment</span>
+                    <span>↗ Share</span>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="rightbar">
+            <h3>Contacts</h3>
+            <p>🟢 Rahul Kumar</p>
+            <p>🟢 Pooja V.</p>
+            <p>🟢 Pratap</p>
+            <p>🟢 Manoj</p>
+        </aside>
+
+    </div>
+
+</body>
+</html>
