@@ -13,3 +13,4 @@
             Name = "${var.instance_name}-${random_string.instance_prefix.result}"
         }
     }
+    
